@@ -23,10 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     // button section
     Button AddCityButton;
-
-
-
-
+    Button DeleteCityButton;
 
 
 
@@ -37,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        // initlization
         cityList = findViewById(R.id.city_list);
         AddCityButton = findViewById(R.id.AddCityButton);
+        DeleteCityButton = findViewById(R.id.DeleteCityButton);
 
         String []cities = {"Edmonton", "Calgary", "Toronto", "Moscow", "Sydney" , "Berlin", "Vienna" , "Tokyo", "Beijing", "Osaka" , "New Delhi"};
 
         dataList = new ArrayList<>();
         dataList.addAll(Arrays.asList(cities));
-
 
         cityAdapter = new ArrayAdapter<>(this, R.layout.content, dataList);
         cityList.setAdapter(cityAdapter);
