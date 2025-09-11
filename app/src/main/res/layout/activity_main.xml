@@ -11,8 +11,10 @@
 
     <ListView
         android:id="@+id/city_list"
-        android:layout_width="440dp"
+        android:layout_width="match_parent"
         android:layout_height="620dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +58,7 @@
         android:layout_height="55dp"
         android:inputType="text"
         android:text="Enter City"
+        android:textAlignment="center"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
