@@ -1,8 +1,10 @@
 package com.example.listycity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
     // button section
     Button AddCityButton;
     Button DeleteCityButton;
+    Button ConfirmButton;
+
+    // input text
+
+    EditText InputText;
+
 
 
 
@@ -35,12 +44,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // initlization
-        cityList = findViewById(R.id.city_list);
-        AddCityButton = findViewById(R.id.AddCityButton);
-        DeleteCityButton = findViewById(R.id.DeleteCityButton);
+        cityList = (ListView) findViewById(R.id.city_list);
+        AddCityButton = (Button) findViewById(R.id.AddCityButton);
+        DeleteCityButton = (Button)findViewById(R.id.DeleteCityButton);
+        ConfirmButton = (Button)findViewById(R.id.ConfirmButton);
+        InputText = (EditText)findViewById(R.id.InputCity);
+
 
         String []cities = {"Edmonton", "Calgary", "Toronto", "Moscow", "Sydney" , "Berlin", "Vienna" , "Tokyo", "Beijing", "Osaka" , "New Delhi"};
-
         dataList = new ArrayList<>();
         dataList.addAll(Arrays.asList(cities));
 
@@ -48,21 +59,7 @@ public class MainActivity extends AppCompatActivity {
         cityList.setAdapter(cityAdapter);
 
 
-
-
-
-
-
-
-
-
-
-//        EdgeToEdge.enable(this);
-//        setContentView(R.layout.activity_main);
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
+//        AddCityButton.setOnClickListener(new View.OnClickListener(){
 //        });
     }
 }
