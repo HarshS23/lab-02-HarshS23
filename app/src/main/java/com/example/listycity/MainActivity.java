@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
         InputText = (EditText)findViewById(R.id.InputCity);
 
 
-        String []cities = {"Edmonton", "Calgary", "Toronto", "Moscow", "Sydney" , "Berlin", "Vienna" , "Tokyo", "Beijing", "Osaka" , "New Delhi"};
-        //String []cities = {};
+        //String []cities = {"Edmonton", "Calgary", "Toronto", "Moscow", "Sydney" , "Berlin", "Vienna" , "Tokyo", "Beijing", "Osaka" , "New Delhi"};
+        String []cities = {};
 
         dataList = new ArrayList<>();
         dataList.addAll(Arrays.asList(cities));
@@ -150,8 +150,6 @@ public class MainActivity extends AppCompatActivity {
                 cityList.requestLayout();
 
                 selectedPosition = -1;
-//                selectedCity = null;
-
                 Toast.makeText(MainActivity.this, "Deleted: "+ removed, Toast.LENGTH_SHORT).show();
             }
         });
