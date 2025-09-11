@@ -11,56 +11,62 @@
 
     <ListView
         android:id="@+id/city_list"
-        android:layout_width="438dp"
+        android:layout_width="440dp"
         android:layout_height="620dp"
-        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019">
 
     </ListView>
 
     <Button
         android:id="@+id/AddCityButton"
-        android:layout_width="212dp"
+        android:layout_width="180dp"
         android:layout_height="67dp"
         android:layout_marginTop="624dp"
         android:padding="16dp"
         android:text="Add City"
         android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/city_list" />
+        app:layout_constraintTop_toTopOf="@+id/city_list"
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
         android:id="@+id/DeleteCityButton"
         android:layout_width="180dp"
         android:layout_height="67dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="624dp"
         android:text="Delete City"
         android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintStart_toEndOf="@+id/AddCityButton"
-        app:layout_constraintTop_toTopOf="@+id/city_list" />
+        app:layout_constraintTop_toTopOf="@+id/city_list"
+        app:layout_constraintVertical_bias="0.042" />
 
     <EditText
         android:id="@+id/InputCity"
         android:layout_width="430dp"
         android:layout_height="55dp"
-        android:ems="10"
         android:inputType="text"
         android:text="Enter City"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.911"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/city_list"
-        app:layout_constraintVertical_bias="0.879" />
+        app:layout_constraintVertical_bias="0.829" />
 
     <Button
         android:id="@+id/ConfirmButton"
-        android:layout_width="300dp"
+        android:layout_width="450dp"
         android:layout_height="wrap_content"
         android:text="Confirm"
         android:textSize="25dp"
@@ -68,6 +74,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.923" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
