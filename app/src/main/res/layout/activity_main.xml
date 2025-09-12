@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Top: the list fills available space above the controls -->
+
     <ListView
         android:id="@+id/city_list"
         android:layout_width="0dp"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Row for Add/Delete buttons -->
+
     <LinearLayout
         android:id="@+id/buttons_row"
         android:layout_width="0dp"
@@ -53,7 +53,7 @@
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
-    <!-- Input just above Confirm -->
+
     <EditText
         android:id="@+id/InputCity"
         android:layout_width="0dp"
@@ -70,7 +70,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="12dp" />
 
-    <!-- Bottom: Confirm button anchored to bottom -->
+
     <Button
         android:id="@+id/ConfirmButton"
         android:layout_width="0dp"
