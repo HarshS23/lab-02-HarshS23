@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
         // initlization
         cityList = (ListView) findViewById(R.id.city_list);
         AddCityButton = (Button) findViewById(R.id.AddCityButton);
-        DeleteCityButton = (Button)findViewById(R.id.DeleteCityButton);
-        ConfirmButton = (Button)findViewById(R.id.ConfirmButton);
-        InputText = (EditText)findViewById(R.id.InputCity);
+        DeleteCityButton = (Button) findViewById(R.id.DeleteCityButton);
+        ConfirmButton = (Button) findViewById(R.id.ConfirmButton);
+        InputText = (EditText) findViewById(R.id.InputCity);
 
         // list with some cities
         String []cities = {"Edmonton", "Calgary", "Toronto", "Moscow", "Sydney" , "Berlin", "Vienna" , "Tokyo", "Beijing", "Osaka" , "New Delhi"};
