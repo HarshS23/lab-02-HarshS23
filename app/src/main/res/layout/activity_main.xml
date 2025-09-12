@@ -5,81 +5,82 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     tools:context=".MainActivity">
 
-
+    <!-- Top: the list fills available space above the controls -->
     <ListView
         android:id="@+id/city_list"
-        android:layout_width="match_parent"
-        android:layout_height="620dp"
-        android:scrollbars="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fadeScrollbars="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019">
-
-    </ListView>
-
-    <Button
-        android:id="@+id/AddCityButton"
-        android:layout_width="180dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="624dp"
-        android:padding="16dp"
-        android:text="Add City"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_row"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/city_list"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/DeleteCityButton"
-        android:layout_width="180dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="624dp"
-        android:text="Delete City"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!-- Row for Add/Delete buttons -->
+    <LinearLayout
+        android:id="@+id/buttons_row"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.733"
-        app:layout_constraintStart_toEndOf="@+id/AddCityButton"
-        app:layout_constraintTop_toTopOf="@+id/city_list"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintBottom_toTopOf="@+id/InputCity">
 
+        <Button
+            android:id="@+id/AddCityButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add City"
+            android:textSize="18sp"
+            android:minHeight="48dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/DeleteCityButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete City"
+            android:textSize="18sp"
+            android:minHeight="48dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Input just above Confirm -->
     <EditText
         android:id="@+id/InputCity"
-        android:layout_width="430dp"
-        android:layout_height="55dp"
-        android:inputType="text"
-        android:text="Enter City"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter city"
+        android:inputType="textCapWords"
         android:textAlignment="center"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
+        android:textSize="18sp"
+        android:padding="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/city_list"
-        app:layout_constraintVertical_bias="0.829" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ConfirmButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp" />
 
+    <!-- Bottom: Confirm button anchored to bottom -->
     <Button
         android:id="@+id/ConfirmButton"
-        android:layout_width="450dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Confirm"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:minHeight="48dp"
+        android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923" />
-
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
